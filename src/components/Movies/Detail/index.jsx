@@ -10,8 +10,9 @@ function MovieDetail() {
 
     useEffect( () => {
         let url = `https://api.themoviedb.org/3/movie/${id}`;
+        let apiKey = import.meta.env.VITE_API_KEY;
 
-        fetch(url, {headers: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOWY3M2I0NjRhYjI4OWNmOTc2N2RmZTAwZmM5YWYxYyIsIm5iZiI6MTc4MjMzMDY0OS4wNjksInN1YiI6IjZhM2MzNTE5NGY5NjgyYTA4Yzk0OWEzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LXPf5juQwXcxZDNFpG_EWw1AhwBT7n9ajSgJh1dBKDY'}})
+        fetch(url, {headers: {'Authorization': `Bearer ${apiKey}`}})
         .then( (data) => {
             let json = data.json().then( data => {
                 console.log(data);
