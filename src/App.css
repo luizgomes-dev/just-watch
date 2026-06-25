@@ -10,7 +10,7 @@ body {
 
 header {
   padding: 20px;
-  width: 100%;
+  width: auto;
   background-color: #504b4b;
   display: flex;
   align-items: center;
@@ -29,4 +29,52 @@ header {
   font-family: Monospace;
   font-size: 15px;
   cursor: pointer;
+}
+
+.cardMovie { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  margin: 5px;
+}
+
+.containerDetail {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cardMovie:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.posterDetail {
+  width: 300px;
+  overflow: hidden;
+}
+
+.btnFavorite {
+  color: black;
+  background-color: rgb(11, 110, 20);
+  border-radius: 3px; 
+  font-family: Monospace;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.movieTitle {
+  color: white;
+  font-size: 16px;
+}
+
+.moviePoster{
+  width: 60%;
+  overflow: hidden;
 }

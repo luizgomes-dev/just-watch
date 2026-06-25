@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import CardMovie from '../Card'
 
 function ListMovies() {
 
@@ -12,25 +13,21 @@ function ListMovies() {
       
       data.json()
         .then(json => setList(json.results))
-
-      
-
+         
     }).catch( err => { console.log(err) })
 
   }, [])
 
   return (
-    <>
+    <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}} >
       {
         list.map( movie => {
           return (
-            <div id={movie.id}>            
-              <h3>{movie.title}</h3>
-              <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} />
-            </div>)
+            <CardMovie key={movie.id} movie={movie} />
+          )
         })
       }
-    </>
+    </div>
   )
 
 }

@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <>
       <header>
-          <span className="headerTitle">Just Watch</span>
-          <button className="headerButton">My movies</button>
+          <Link to='/'><span className="headerTitle">Just Watch</span></Link>
+          <Link to='/favorites'><button className="headerButton">My movies</button></Link>
       </header>
     </>
   );

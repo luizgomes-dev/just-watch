@@ -3,8 +3,7 @@ import ListMovies from '../Movies/List';
 
 function Home() {
   return (
-    <>
-      <Header/>
+    <> 
       <ListMovies/>
     </>
   );
