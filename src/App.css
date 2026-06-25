@@ -1,0 +1,32 @@
+html {
+  font-family: Monospace;
+}
+
+body {
+  background-color: #303030;
+  margin: 0px;
+  font-family: Monospace;
+}
+
+header {
+  padding: 20px;
+  width: 100%;
+  background-color: #504b4b;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerTitle {
+  color: white;
+  font-size: 20px;
+}
+
+.headerButton { 
+  color: black;
+  background-color: rgb(11, 110, 20);
+  border-radius: 3px; 
+  font-family: Monospace;
+  font-size: 15px;
+  cursor: pointer;
+}
